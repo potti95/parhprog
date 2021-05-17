@@ -20,15 +20,15 @@ options {
          parser.start(p);
     }
 }
-public static double createArray(Map<Double, Double>> polinomhelyiertekek) {
-    double tomb = new double[10];                                                                  //letrehozzuk a tombot
+public static List<Double> createArray(Map<Double, Double>> polinomhelyiertekek) {
+    List<Double> tomb = new ArrayList<>();                                                                //letrehozzuk a tombot
     if(!polinomhelyiertekek.isEmpty())                                                              //ha a map nemüres
        {
            for(int i=0; i<10;i++)
            {
                 if(polinomhelyiertekek.containsKey(i)){                                            //megnézzük hogy a helyiértékhez létezik e kulcs
-                    tomb[i]=polinomhelyiertekek.get(i)                                            // ha létezik az értéket berakjuk a tömbbe
-                }   else tomb[i]=0.0;                                                             // else 0
+                    tomb.add(polinomhelyiertekek.get(i));                                            // ha létezik az értéket berakjuk a tömbbe
+                }   else tomb.add(0.0);                                                             // else 0
            }
        } else {
          System.out.println("Ures a map");
