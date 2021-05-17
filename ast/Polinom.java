@@ -1,10 +1,12 @@
+import java.util.ArrayList;
+
 public class Polinom {
-    double value[] = new double[];
+    List<Double> value = new ArrayList<>();
     String name;
     public Polinom(String name){
         this.name=name;
     }
-    public Polinom(String name, Double value[]){
+    public Polinom(String name, List<Double> value){
         this.name=name;
         this.value=value;
     }
@@ -12,7 +14,7 @@ public class Polinom {
         return name;
     }
 
-    public void setErtek(Double value[]) {
+    public void setErtek(List<Double> value) {
         this.value=value;
 
     }
